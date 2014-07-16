@@ -15,7 +15,7 @@ import UIKit
 
 enum AuthType: String {
 	case Email = "Email"
-	case ScreenName = "Screen name"
+	case ScreenName = "Screen Name"
 }
 
 class LoginView: BaseWidgetView, UITextFieldDelegate {
