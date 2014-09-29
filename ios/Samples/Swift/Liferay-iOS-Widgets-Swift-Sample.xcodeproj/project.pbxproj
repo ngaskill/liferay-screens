@@ -16,13 +16,14 @@
 		8868AFD119656B0500FD5214 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8868AFCF19656B0500FD5214 /* Main.storyboard */; };
 		8868AFD319656B0500FD5214 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8868AFD219656B0500FD5214 /* Images.xcassets */; };
 		888F6206198FD3F20082786B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F6205198FD3F20082786B /* SignUpViewController.swift */; };
-		889017F519D8AA7100CF2DCE /* LiferayLoginScreenNameConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889017F419D8AA7100CF2DCE /* LiferayLoginScreenNameConnector.swift */; };
-		889017F719D8AADA00CF2DCE /* BaseConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889017F619D8AADA00CF2DCE /* BaseConnector.swift */; };
-		889017F919D8AB8600CF2DCE /* LiferayLoginBaseConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889017F819D8AB8600CF2DCE /* LiferayLoginBaseConnector.swift */; };
 		889017FD19D8B76100CF2DCE /* LiferaySignUpConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889017FC19D8B76100CF2DCE /* LiferaySignUpConnector.swift */; };
 		8890CDAA19AE1CA50012B842 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8890CDA919AE1CA50012B842 /* MobileCoreServices.framework */; };
 		889558DF19C1E7FD00657AC7 /* AssetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889558DE19C1E7FD00657AC7 /* AssetListViewController.swift */; };
-		88DF666F19D8475B00EFE05E /* LiferayLoginEmailConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DF666E19D8475B00EFE05E /* LiferayLoginEmailConnector.swift */; };
+		88C7ADDA19D96BFE008F1B19 /* AuthBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7ADD919D96BFE008F1B19 /* AuthBased.swift */; };
+		88C7ADDC19D96DF9008F1B19 /* BaseConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7ADDB19D96DF9008F1B19 /* BaseConnector.swift */; };
+		88C7ADE119D96E18008F1B19 /* LiferayLoginBaseConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7ADDE19D96E18008F1B19 /* LiferayLoginBaseConnector.swift */; };
+		88C7ADE219D96E18008F1B19 /* LiferayLoginEmailConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7ADDF19D96E18008F1B19 /* LiferayLoginEmailConnector.swift */; };
+		88C7ADE319D96E18008F1B19 /* LiferayLoginScreenNameConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C7ADE019D96E18008F1B19 /* LiferayLoginScreenNameConnector.swift */; };
 		88F3902B19D595B100169918 /* liferay-server-context.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88F3902A19D595B100169918 /* liferay-server-context.plist */; };
 		88F390D719D595C200169918 /* WebContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3902E19D595C200169918 /* WebContentView.swift */; };
 		88F390D819D595C200169918 /* WebContentWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3902F19D595C200169918 /* WebContentWidget.swift */; };
@@ -67,7 +68,7 @@
 		88F390FF19D595C200169918 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3906319D595C200169918 /* ForgotPasswordView.swift */; };
 		88F3910019D595C200169918 /* ForgotPasswordWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3906419D595C200169918 /* ForgotPasswordWidget.swift */; };
 		88F3910119D595C200169918 /* liferay-server-context-sample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88F3906619D595C200169918 /* liferay-server-context-sample.plist */; };
-		88F3910219D595C200169918 /* LoginAuthType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3906819D595C200169918 /* LoginAuthType.swift */; };
+		88F3910219D595C200169918 /* LoginAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3906819D595C200169918 /* LoginAuth.swift */; };
 		88F3910319D595C200169918 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3906919D595C200169918 /* LoginView.swift */; };
 		88F3910419D595C200169918 /* LoginWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3906A19D595C200169918 /* LoginWidget.swift */; };
 		88F3910519D595C200169918 /* LRSession+CredentialStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3906B19D595C200169918 /* LRSession+CredentialStore.swift */; };
@@ -170,13 +171,14 @@
 		8868AFD019656B0500FD5214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8868AFD219656B0500FD5214 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		888F6205198FD3F20082786B /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		889017F419D8AA7100CF2DCE /* LiferayLoginScreenNameConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiferayLoginScreenNameConnector.swift; sourceTree = "<group>"; };
-		889017F619D8AADA00CF2DCE /* BaseConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseConnector.swift; sourceTree = "<group>"; };
-		889017F819D8AB8600CF2DCE /* LiferayLoginBaseConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiferayLoginBaseConnector.swift; sourceTree = "<group>"; };
 		889017FC19D8B76100CF2DCE /* LiferaySignUpConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiferaySignUpConnector.swift; sourceTree = "<group>"; };
 		8890CDA919AE1CA50012B842 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		889558DE19C1E7FD00657AC7 /* AssetListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetListViewController.swift; sourceTree = "<group>"; };
-		88DF666E19D8475B00EFE05E /* LiferayLoginEmailConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiferayLoginEmailConnector.swift; sourceTree = "<group>"; };
+		88C7ADD919D96BFE008F1B19 /* AuthBased.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthBased.swift; sourceTree = "<group>"; };
+		88C7ADDB19D96DF9008F1B19 /* BaseConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseConnector.swift; sourceTree = "<group>"; };
+		88C7ADDE19D96E18008F1B19 /* LiferayLoginBaseConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiferayLoginBaseConnector.swift; sourceTree = "<group>"; };
+		88C7ADDF19D96E18008F1B19 /* LiferayLoginEmailConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiferayLoginEmailConnector.swift; sourceTree = "<group>"; };
+		88C7ADE019D96E18008F1B19 /* LiferayLoginScreenNameConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiferayLoginScreenNameConnector.swift; sourceTree = "<group>"; };
 		88F3902A19D595B100169918 /* liferay-server-context.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "liferay-server-context.plist"; sourceTree = "<group>"; };
 		88F3902E19D595C200169918 /* WebContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebContentView.swift; sourceTree = "<group>"; };
 		88F3902F19D595C200169918 /* WebContentWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebContentWidget.swift; sourceTree = "<group>"; };
@@ -223,7 +225,7 @@
 		88F3906419D595C200169918 /* ForgotPasswordWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordWidget.swift; sourceTree = "<group>"; };
 		88F3906519D595C200169918 /* liferay-ios-widgets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "liferay-ios-widgets.h"; sourceTree = "<group>"; };
 		88F3906619D595C200169918 /* liferay-server-context-sample.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "liferay-server-context-sample.plist"; sourceTree = "<group>"; };
-		88F3906819D595C200169918 /* LoginAuthType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAuthType.swift; sourceTree = "<group>"; };
+		88F3906819D595C200169918 /* LoginAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAuth.swift; sourceTree = "<group>"; };
 		88F3906919D595C200169918 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		88F3906A19D595C200169918 /* LoginWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWidget.swift; sourceTree = "<group>"; };
 		88F3906B19D595C200169918 /* LRSession+CredentialStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LRSession+CredentialStore.swift"; sourceTree = "<group>"; };
@@ -385,6 +387,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		88C7ADDD19D96E18008F1B19 /* Connectors */ = {
+			isa = PBXGroup;
+			children = (
+				88C7ADDE19D96E18008F1B19 /* LiferayLoginBaseConnector.swift */,
+				88C7ADDF19D96E18008F1B19 /* LiferayLoginEmailConnector.swift */,
+				88C7ADE019D96E18008F1B19 /* LiferayLoginScreenNameConnector.swift */,
+			);
+			path = Connectors;
+			sourceTree = "<group>";
+		};
 		88F3902C19D595C200169918 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,9 +446,10 @@
 		88F3903519D595C200169918 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				88C7ADDB19D96DF9008F1B19 /* BaseConnector.swift */,
 				88F3903619D595C200169918 /* BaseListWidget */,
-				88F3903B19D595C200169918 /* BaseWidget+progress.swift */,
 				88F3903C19D595C200169918 /* BaseWidget.swift */,
+				88F3903B19D595C200169918 /* BaseWidget+progress.swift */,
 				88F3903D19D595C200169918 /* BaseWidgetView.swift */,
 				88F3903E19D595C200169918 /* LiferayServerContext.swift */,
 				88F3903F19D595C200169918 /* PaginationOperation.swift */,
@@ -548,14 +561,12 @@
 		88F3906719D595C200169918 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				88F3906819D595C200169918 /* LoginAuthType.swift */,
+				88C7ADD919D96BFE008F1B19 /* AuthBased.swift */,
+				88C7ADDD19D96E18008F1B19 /* Connectors */,
+				88F3906819D595C200169918 /* LoginAuth.swift */,
 				88F3906919D595C200169918 /* LoginView.swift */,
 				88F3906A19D595C200169918 /* LoginWidget.swift */,
 				88F3906B19D595C200169918 /* LRSession+CredentialStore.swift */,
-				889017F619D8AADA00CF2DCE /* BaseConnector.swift */,
-				889017F819D8AB8600CF2DCE /* LiferayLoginBaseConnector.swift */,
-				88DF666E19D8475B00EFE05E /* LiferayLoginEmailConnector.swift */,
-				889017F419D8AA7100CF2DCE /* LiferayLoginScreenNameConnector.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -965,6 +976,7 @@
 				88F3912519D595C200169918 /* DDLSubmitButtonTableCell_default.swift in Sources */,
 				88F390E219D595C200169918 /* LiferayServerContext.swift in Sources */,
 				88F3910819D595C200169918 /* LRMobilewidgetsuserService_v62.m in Sources */,
+				88C7ADDC19D96DF9008F1B19 /* BaseConnector.swift in Sources */,
 				88F3910419D595C200169918 /* LoginWidget.swift in Sources */,
 				88F3912919D595C200169918 /* DefaultThemeConstants.swift in Sources */,
 				88F390FE19D595C200169918 /* UIView+Animations.swift in Sources */,
@@ -972,7 +984,6 @@
 				88F390EC19D595C200169918 /* DDLListView.swift in Sources */,
 				88F3910A19D595C200169918 /* SignUpWidget.swift in Sources */,
 				88F390EA19D595C200169918 /* DDLFieldTableCell.swift in Sources */,
-				889017F719D8AADA00CF2DCE /* BaseConnector.swift in Sources */,
 				88F390FA19D595C200169918 /* Global.swift in Sources */,
 				88F3914D19D595C200169918 /* Flat7ThemeConstants.swift in Sources */,
 				88F390FC19D595C200169918 /* NSLocale+CurrentLocale.swift in Sources */,
@@ -980,6 +991,7 @@
 				88F3911C19D595C200169918 /* DDLFieldSelectTableCell_default.swift in Sources */,
 				88F390D819D595C200169918 /* WebContentWidget.swift in Sources */,
 				88F3911219D595C200169918 /* DDLFieldDateTableCell_default.swift in Sources */,
+				88C7ADE219D96E18008F1B19 /* LiferayLoginEmailConnector.swift in Sources */,
 				88F390F019D595C200169918 /* DDLField.swift in Sources */,
 				88F390DB19D595C200169918 /* AssetListTableView.swift in Sources */,
 				88F390F519D595C200169918 /* DDLFieldString.swift in Sources */,
@@ -991,14 +1003,14 @@
 				88F3912A19D595C200169918 /* ForgotPasswordView_default.swift in Sources */,
 				88F3911E19D595C200169918 /* DDLFieldTextareaTableCell_default.swift in Sources */,
 				88F3914B19D595C200169918 /* SignUpView_default.swift in Sources */,
-				88F3910219D595C200169918 /* LoginAuthType.swift in Sources */,
+				88F3910219D595C200169918 /* LoginAuth.swift in Sources */,
 				88F390E719D595C200169918 /* DDLXSDParser.swift in Sources */,
 				88F390E619D595C200169918 /* DDLValuesParser.swift in Sources */,
 				88F390DF19D595C200169918 /* BaseWidget+progress.swift in Sources */,
 				88F390FD19D595C200169918 /* UIImage+Themes.m in Sources */,
 				88F390F819D595C200169918 /* DDLRecord.swift in Sources */,
 				8868AFCC19656B0500FD5214 /* AppDelegate.swift in Sources */,
-				889017F919D8AB8600CF2DCE /* LiferayLoginBaseConnector.swift in Sources */,
+				88C7ADE119D96E18008F1B19 /* LiferayLoginBaseConnector.swift in Sources */,
 				88F390ED19D595C200169918 /* DDLListWidget.swift in Sources */,
 				88F3910F19D595C200169918 /* DDLBaseFieldTextFieldTableCell_default.swift in Sources */,
 				88F3914E19D595C200169918 /* ForgotPasswordView_flat7.swift in Sources */,
@@ -1012,6 +1024,7 @@
 				88F3911819D595C200169918 /* DDLFieldNumberTableCell_default.swift in Sources */,
 				88F390F919D595C200169918 /* Bool+Conversion.swift in Sources */,
 				88F3910D19D595C200169918 /* AssetListView_default.swift in Sources */,
+				88C7ADDA19D96BFE008F1B19 /* AuthBased.swift in Sources */,
 				88F3910719D595C200169918 /* LRMobilewidgetsddlrecordService_v62.m in Sources */,
 				88F390F619D595C200169918 /* DDLFieldStringWithOptions.swift in Sources */,
 				88F390D719D595C200169918 /* WebContentView.swift in Sources */,
@@ -1020,11 +1033,11 @@
 				88F390E819D595C200169918 /* DDLFormView.swift in Sources */,
 				88F390F219D595C200169918 /* DDLFieldDate.swift in Sources */,
 				88F390F119D595C200169918 /* DDLFieldBoolean.swift in Sources */,
-				88DF666F19D8475B00EFE05E /* LiferayLoginEmailConnector.swift in Sources */,
 				88F390FF19D595C200169918 /* ForgotPasswordView.swift in Sources */,
 				88F3910019D595C200169918 /* ForgotPasswordWidget.swift in Sources */,
 				88F390D919D595C200169918 /* AssetListView.swift in Sources */,
 				88F3910919D595C200169918 /* SignUpView.swift in Sources */,
+				88C7ADE319D96E18008F1B19 /* LiferayLoginScreenNameConnector.swift in Sources */,
 				88F390E319D595C200169918 /* PaginationOperation.swift in Sources */,
 				885FD6831996E1DF00F23BA1 /* FormViewController.swift in Sources */,
 				888F6206198FD3F20082786B /* SignUpViewController.swift in Sources */,
@@ -1032,7 +1045,6 @@
 				88F3910B19D595C200169918 /* WebContentView_default.swift in Sources */,
 				889558DF19C1E7FD00657AC7 /* AssetListViewController.swift in Sources */,
 				88F3911619D595C200169918 /* DDLFieldDocumentlibraryTableCell_default.swift in Sources */,
-				889017F519D8AA7100CF2DCE /* LiferayLoginScreenNameConnector.swift in Sources */,
 				88F390DC19D595C200169918 /* BaseListView.swift in Sources */,
 				88F3915019D595C200169918 /* LoginView_flat7.swift in Sources */,
 				88F390EF19D595C200169918 /* DDLField+Editor.swift in Sources */,
