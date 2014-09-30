@@ -159,7 +159,7 @@ import QuartzCore
 
 		if let viewValue = view {
 			viewValue.frame = bounds
-			viewValue.customAction = onCustomAction;
+			viewValue.onUserAction = onUserAction;
 
 			addSubview(viewValue)
 
@@ -279,9 +279,9 @@ import QuartzCore
 	}
 
 	/*
-	 * onCustomAction is invoked when a TouchUpInside even is fired from the UI.
+	 * onUserAction is invoked when a TouchUpInside even is fired from the UI.
 	 */
-	internal func onCustomAction(actionName:String?, sender:AnyObject?) {
+	internal func onUserAction(actionName:String?, sender:AnyObject?) {
 	}
 
 	/**
