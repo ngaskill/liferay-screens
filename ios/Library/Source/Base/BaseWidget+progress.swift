@@ -64,7 +64,7 @@ extension BaseWidget {
 
 	public enum CloseMode {
 
-		case NoAutoclose(Bool)
+		case ManualClose
 		case AutocloseDelayed(Double, Bool)
 		case AutocloseComputedDelay(Bool)
 
@@ -76,8 +76,8 @@ extension BaseWidget {
 					result = touchClose
 				case .AutocloseDelayed(let delay, let touchClose):
 					result = touchClose
-				case .NoAutoclose(let touchClose):
-					result = touchClose
+				case .ManualClose:
+					result = true
 			}
 
 			return result
@@ -121,7 +121,7 @@ extension BaseWidget {
 	*/
 	public func showHUDWithMessage(message:String?,
 			details:String? = nil,
-			closeMode:CloseMode = .NoAutoclose(false),
+			closeMode:CloseMode = .ManualClose,
 			spinnerMode:SpinnerMode = .IndeterminateSpinner) {
 
 		synchronized(BaseWidgetHudLock) {
@@ -177,9 +177,7 @@ extension BaseWidget {
 	}
 
 	public func showHUDAlert(#message: String, details: String? = nil) {
-		//FIXME Change "NoAutoclose(true)" by "NoAutoclose" when LMW-83 is merged
-
-		showHUDWithMessage(message, details: details, closeMode: .NoAutoclose(true), spinnerMode: .NoSpinner)
+		showHUDWithMessage(message, details: details, closeMode: .ManualClose, spinnerMode: .NoSpinner)
 	}
 
 	/*

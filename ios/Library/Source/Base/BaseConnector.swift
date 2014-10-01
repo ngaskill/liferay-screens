@@ -150,8 +150,8 @@ internal class BaseConnector: NSOperation {
 		dispatch_async(dispatch_get_main_queue()) {
 			self.widget.showHUDWithMessage(errorMessage,
 					details: details,
-					closeMode:.NoAutoclose(true),
-					spinnerMode:.NoSpinner)
+					closeMode: .ManualClose,
+					spinnerMode: .NoSpinner)
 		}
 	}
 
