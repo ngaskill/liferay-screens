@@ -17,6 +17,7 @@ import UIKit
 @objc public protocol UserPortraitScreenletDelegate {
 
 	optional func onUserPortraitResponse(image: UIImage) -> UIImage
+	optional func onUserPortraitUploaded(result: [String:AnyObject])
 	optional func onUserPortraitError(error: NSError)
 
 }
@@ -35,12 +36,20 @@ public class UserPortraitScreenlet: BaseScreenlet {
 		}
 	}
 
+	@IBInspectable public var editable: Bool = false {
+		didSet {
+			(screenletView as? UserPortraitViewModel)?.editable = self.editable
+		}
+	}
+
 	@IBOutlet public weak var delegate: UserPortraitScreenletDelegate?
 
 
 	public var viewModel: UserPortraitViewModel {
 		return screenletView as! UserPortraitViewModel
 	}
+
+	private var loadedUserId: Int64?
 
 
 	//MARK: BaseScreenlet
@@ -50,11 +59,15 @@ public class UserPortraitScreenlet: BaseScreenlet {
 
 		viewModel.borderWidth = self.borderWidth
 		viewModel.borderColor = self.borderColor
+		viewModel.editable = self.editable
 		viewModel.portraitLoaded = onPortraitLoaded
 	}
 
 	public func loadLoggedUserPortrait() -> Bool {
 		let interactor = UserPortraitLoadLoggedUserInteractor(screenlet: self)
+
+		let currentUserId = SessionContext.userAttribute("userId") as? Int
+		loadedUserId =  currentUserId.map { Int64($0) }
 
 		return startInteractor(interactor)
 	}
@@ -66,6 +79,8 @@ public class UserPortraitScreenlet: BaseScreenlet {
 				uuid: uuid,
 				male: male)
 
+		loadedUserId = nil
+
 		return startInteractor(interactor)
 	}
 
@@ -73,6 +88,8 @@ public class UserPortraitScreenlet: BaseScreenlet {
 		let interactor = UserPortraitLoadByUserIdInteractor(
 				screenlet: self,
 				userId: userId)
+
+		loadedUserId = userId
 
 		return startInteractor(interactor)
 	}
@@ -83,6 +100,8 @@ public class UserPortraitScreenlet: BaseScreenlet {
 				companyId: companyId,
 				emailAddress: emailAddress)
 
+		loadedUserId = nil
+
 		return startInteractor(interactor)
 	}
 
@@ -92,9 +111,54 @@ public class UserPortraitScreenlet: BaseScreenlet {
 				companyId: companyId,
 				screenName: screenName)
 
+		loadedUserId = nil
+
 		return startInteractor(interactor)
 	}
 
+	override internal func createInteractor(#name: String?, sender: AnyObject?) -> Interactor? {
+
+		let interactor: UploadUserPortraitInteractor?
+
+		switch name! {
+		case "upload-portrait":
+			let image = sender as! UIImage
+			let userId: Int64?
+
+			if let loadedUserIdValue = loadedUserId {
+				userId = loadedUserIdValue
+			}
+			else {
+				let currentUserId = SessionContext.userAttribute("userId") as? Int
+				userId =  currentUserId.map { Int64($0) }
+			}
+
+			if userId == nil {
+				println("ERROR: Can't change the portrait without an userId")
+				return nil
+			}
+
+			interactor = UploadUserPortraitInteractor(
+					screenlet: self,
+					userId: userId!,
+					image: image)
+
+			interactor!.onSuccess = { [weak interactor] in
+				self.delegate?.onUserPortraitUploaded?(interactor!.uploadResult!)
+				self.load(userId: userId!)
+			}
+
+			interactor!.onFailure = {
+				self.delegate?.onUserPortraitError?($0)
+				return
+			}
+
+		default:
+			interactor = nil
+		}
+
+		return interactor
+	}
 
 	//MARK: Private methods
 

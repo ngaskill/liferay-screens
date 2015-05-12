@@ -4,22 +4,20 @@ Pod::Spec.new do |s|
 	s.version      = '0.3'
 	s.summary      = 'A family of visual components called screenlets that are connected to the Liferay Platform used as a backend'
 	s.homepage     = 'https://www.liferay.com/liferay-screens'
-	s.documentation_url = 'https://github.com/liferay/liferay-screens'
 	s.license = { 
 		:type => 'LGPL 2.1', 
 		:file => 'LICENSE.md'
 	}
 	s.source = {
 		:git => 'https://github.com/liferay/liferay-screens.git',
-		:tag => 'v1.0-beta-3'
+		:commit => 'd94ddb98be3ef5e676396d82494449c0eb75f0b5',
+		:tag => '0.3'
 	}
 	s.authors = {
 		'Jose Manuel Navarro' => 'jose.navarro@liferay.com'
 	}
-	s.social_media_url = 'http://twitter.com/jmnavarro'
 	
-	s.platform = :ios
-	s.ios.deployment_target = '8.0'
+	s.platform = :ios, '8.0'
 	s.requires_arc = true
 
 	s.ios.frameworks = 'CoreGraphics', 'Foundation', 'MobileCoreServices', 'QuartzCore', 'Security', 'SystemConfiguration', 'UIKit'
@@ -41,14 +39,19 @@ Pod::Spec.new do |s|
 		'OTHER_SWIFT_FLAGS' => '"-D" "LIFERAY_SCREENS_FRAMEWORK"'
 	}
 
+	# Core
+	s.dependency 'Liferay-iOS-SDK', '6.2.0.17'
 	s.dependency 'MBProgressHUD', '~> 0.9.1'
-	s.dependency 'SMXMLDocument'
 	s.dependency 'UICKeyChainStore'
+	s.dependency 'SMXMLDocument'
+	s.dependency 'ODRefreshControl'
+
+	# UserPortrait
+	s.dependency 'CryptoSwift'
+
+	# DDLForm
 	s.dependency 'DTPickerPresenter'
 	s.dependency 'TNRadioButtonGroup'
 	s.dependency 'MDRadialProgress'
-	s.dependency 'ODRefreshControl'
-	s.dependency 'Liferay-iOS-SDK', '6.2.0.17'
-	s.dependency 'CryptoSwift'
 
 end
