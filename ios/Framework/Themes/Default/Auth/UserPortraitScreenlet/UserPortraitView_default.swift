@@ -152,6 +152,13 @@ public class UserPortraitView_default: BaseScreenletView,
 		}
 	}
 
+	public func loadPlaceholder() {
+		self.portraitImage?.image = imageInAnyBundle(
+				name: "default-portrait-placeholder",
+				currentClass: self.dynamicType,
+				currentTheme: "default")
+	}
+
 
 	//MARK: Internal methods
 
@@ -191,13 +198,6 @@ public class UserPortraitView_default: BaseScreenletView,
 					self.portraitLoaded?(nil, error)
 					self.onFinishOperation()
 			})
-	}
-
-	internal func loadPlaceholder() {
-		self.portraitImage?.image = imageInAnyBundle(
-				name: "default-portrait-placeholder",
-				currentClass: self.dynamicType,
-				currentTheme: "default")
 	}
 
 
