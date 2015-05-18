@@ -153,7 +153,7 @@ public class UserPortraitView_default: BaseScreenletView,
 	}
 
 	public func loadPlaceholder() {
-		self.portraitImage?.image = imageInAnyBundle(
+		self.portraitImage?.image = NSBundle.imageInBundles(
 				name: "default-portrait-placeholder",
 				currentClass: self.dynamicType)
 	}

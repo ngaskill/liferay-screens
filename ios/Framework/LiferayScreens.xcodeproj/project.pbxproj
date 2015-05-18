@@ -284,6 +284,8 @@
 		88A2B7181ACDEC29000C2065 /* DDLListView_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A2B7161ACDEC29000C2065 /* DDLListView_test.swift */; };
 		88A2B7191ACDEC29000C2065 /* DDLListView_test.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88A2B7171ACDEC29000C2065 /* DDLListView_test.xib */; };
 		88A2B71E1ACDEF5D000C2065 /* LoginView_default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881E61C31ACBFC3400862B9E /* LoginView_default.swift */; };
+		88C22FE61B0A2D3100EE4CAE /* NSBundle+discovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C22FE51B0A2D3100EE4CAE /* NSBundle+discovery.swift */; };
+		88C22FE71B0A2D3100EE4CAE /* NSBundle+discovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C22FE51B0A2D3100EE4CAE /* NSBundle+discovery.swift */; };
 		88D2C33C1AF8D1C500DCB01C /* GetUserBaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2C3381AF8D1C500DCB01C /* GetUserBaseOperation.swift */; };
 		88D2C33D1AF8D1C500DCB01C /* GetUserBaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2C3381AF8D1C500DCB01C /* GetUserBaseOperation.swift */; };
 		88D2C33E1AF8D1C500DCB01C /* GetUserByEmailOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2C3391AF8D1C500DCB01C /* GetUserByEmailOperation.swift */; };
@@ -554,6 +556,7 @@
 		88A2B7131ACDEBB1000C2065 /* LoginView_test.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView_test.xib; sourceTree = "<group>"; };
 		88A2B7161ACDEC29000C2065 /* DDLListView_test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDLListView_test.swift; sourceTree = "<group>"; };
 		88A2B7171ACDEC29000C2065 /* DDLListView_test.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDLListView_test.xib; sourceTree = "<group>"; };
+		88C22FE51B0A2D3100EE4CAE /* NSBundle+discovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBundle+discovery.swift"; sourceTree = "<group>"; };
 		88D2C3381AF8D1C500DCB01C /* GetUserBaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserBaseOperation.swift; sourceTree = "<group>"; };
 		88D2C3391AF8D1C500DCB01C /* GetUserByEmailOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserByEmailOperation.swift; sourceTree = "<group>"; };
 		88D2C33A1AF8D1C500DCB01C /* GetUserByScreenNameOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserByScreenNameOperation.swift; sourceTree = "<group>"; };
@@ -1319,6 +1322,7 @@
 			children = (
 				8892C6A51ACBD89400192232 /* Bool+Conversion.swift */,
 				8892C6A61ACBD89400192232 /* Global.swift */,
+				88C22FE51B0A2D3100EE4CAE /* NSBundle+discovery.swift */,
 				8892C6A81ACBD89400192232 /* NSLocale+CurrentLocale.swift */,
 				8892C6A91ACBD89400192232 /* UIButton+Title.swift */,
 				8892C6AA1ACBD89400192232 /* UIView+Animations.swift */,
@@ -1792,6 +1796,7 @@
 				881E61891ACBEE0B00862B9E /* LiferayDDLListPageOperation.swift in Sources */,
 				881E61471ACBEDC600862B9E /* AssetListPageLoadInteractor.swift in Sources */,
 				881E618F1ACBEE0B00862B9E /* DDLFieldDocument.swift in Sources */,
+				88C22FE61B0A2D3100EE4CAE /* NSBundle+discovery.swift in Sources */,
 				8892C69F1ACB2FDC00192232 /* LRMobilewidgetsddlrecordService_v62.m in Sources */,
 				881E60C11ACBE43200862B9E /* ServerOperation.swift in Sources */,
 				881E611A1ACBE5F000862B9E /* LiferayLoginByUserIdOperation.swift in Sources */,
@@ -1876,6 +1881,7 @@
 				881E62F71ACC050200862B9E /* DDLListScreenlet.swift in Sources */,
 				881E62A61ACBFF4500862B9E /* UIView+Animations.swift in Sources */,
 				88DE25141AD2AB0A00714701 /* DDLFieldDate_Tests.swift in Sources */,
+				88C22FE71B0A2D3100EE4CAE /* NSBundle+discovery.swift in Sources */,
 				881E62ED1ACC04A500862B9E /* DDLFieldDate.swift in Sources */,
 				88DE250E1AD2AB0A00714701 /* BaseScreenlet_Theme_Tests.swift in Sources */,
 				88A2B71E1ACDEF5D000C2065 /* LoginView_default.swift in Sources */,
