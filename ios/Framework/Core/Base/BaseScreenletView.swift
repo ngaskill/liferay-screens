@@ -29,7 +29,7 @@ public class BaseScreenletView: UIView, UITextFieldDelegate {
 
 	internal var onPerformAction: ((String?, AnyObject?) -> Bool)?
 
-	internal var themeName: String?
+	internal var themeName = "default"
 
 	deinit {
 		onDestroy()
